@@ -1,0 +1,19 @@
+stages:
+  - build
+
+variables:
+  IMAGE_TAGS: 0.98.2-2.12.1-alpine3.11 0.98.2-2.16.5-alpine3.11
+  # CI_DEBUG_TRACE: "TRUE"
+
+before_script:
+
+
+
+build:
+  stage: build
+  tags:
+    - shell-docker
+
+  script:
+    - bash scripts/build_images.sh
+    
